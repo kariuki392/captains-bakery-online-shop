@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="style.css">
+    <title>captains Pastries</title>
+</head>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="Home.html">
+                <h1 class="logo">captains Dough.™</h1>
+            </a>
+            <nav>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign up</a>
+                <a href="#products" onclick="checkLoginStatus(event)">pastry Shelf</a>
+                <a href="about.html">About us</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" onclick="checkLoginStatus(event)">Cart</a>
+            </nav>  
+        </div>
+    </header>
+<body class="body">
+    <section class="hero">
+        <div class="hero-text">
+            <h2></h2>
+            <div>
+                <div id="body">
+                    <div id="text">
+                        <h3>
+                            For Help, Bookings, Orders and Concerns, kindly reach out to our customer service teams via the
+                            following mediums;
+                        </h3>
+                        <br><br><br>
+                        <li id="info">
+                            <h5>
+                                <h3>
+                                    Emails: captainsbakery@gmail.com; / kariukisdough@gmail.com;
+                                </h3>
+                                <h3>
+                                    Telephone Number: 0200009476 / 0714009477 / 0700009478
+                                </h3>
+                            </h5>
+                            <h5>Terms And Conditions Apply.</h5>
+                        </li>
+                    </div>
+                    <footer>
+                        <nav>
+                            <a href="/">Home</a> ||
+                            <a href="/aboutUs">About Us</a>|| <a href="/Help">Contact Teams</a>||
+                        </nav>
+                        <div class="newsletter">
+                            <h3>Sign Up for Our Newsletter</h3>
+                            <p>Get the hottest updates, exclusive deals, sweet treats and more.</p>
+                            <form class="newsletter-form" action="#" method="post">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                        <p>&copy; 2024 captains pastries. | Baked with Love.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    function checkLoginStatus(event) {
+    event.preventDefault();
+    
+    // Check if user is logged in
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    
+    if (!isLoggedIn) {
+        // Show login/signup modal
+        showLoginModal();
+    } else {
+        // If clicking a link, navigate to the href
+        if (event.target.href) {
+            window.location.href = event.target.href;
+        }
+        
+        // If clicking add to cart button, proceed with add to cart
+        if (event.target.classList.contains('add-to-cart')) {
+            addToCart(event.target);
+        }
+    }
+}
+</script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+    .navbar {
+        background-color: #ff6600;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        justify-content: center;
+        margin-top: 0%;
+        right: 1.5%;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .container {
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        width: 95%;
+    }
+
+
+    body {
+        color: #333;
+        background-color: #f9f9f9;
+        overflow-x: hidden;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        background-color: #ff6600;
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #8a4a1f;
+        transform: translateY(-2px);
+    }
+
+    /* Main Content Styles */
+    .hero {
+        margin-top: 80px;
+        width: 100%;
+        min-height: calc(100vh - 80px);
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #body {
+        width: 100%;
+        min-height: 80vh;
+        margin: 0 auto;
+        padding: 3rem;
+        border-radius: 20px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+            url("https://www.kitchenaid.com/is/image/content/dam/business-unit/kitchenaid/en-us/marketing-content/pinch-of-help/Food-Processor-vs-Blender_Masthead3.jpg");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    #text {
+        padding: 3rem;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    #text h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    #info {
+        list-style: none;
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    #info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #ff6600;
+        color: #fff;
+        padding: 4rem 2rem;
+        margin-top: 4rem;
+    }
+
+    .newsletter {
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+    }
+
+    .newsletter h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .newsletter-form button {
+        padding: 1rem 2rem;
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+        background-color: #34495e;
+        transform: translateY(-2px);
+    }
+
+    footer nav {
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+
+    footer nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            margin: 0.5rem;
+        }
+
+        #text h3 {
+            font-size: 1.5rem;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .newsletter-form input,
+        .newsletter-form button {
+            width: 100%;
+        }
+    }
+</style>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>captains Pastries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <header class="navbar">
+        <div class="container">
+            <a href="Home.html"><h1 class="logo">captains Dough.™</h1></a>
+            <nav>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign up</a>
+                <a href="#products" onclick="checkLoginStatus(event)">pastry Shelf</a>
+                <a href="about.html">About us</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" onclick="checkLoginStatus(event)">Cart</a>
+            </nav>
+        </div>
+    </header>
+    <body class="body">
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Delicious,Fresh Handmade Pastry Products</h2>
+            <p>Experience the best of locally handcrafted products made with Passion, Love and Tradition from around the world.</p>
+            <a href="#products" class="btn" onclick="checkLoginStatus(event)">Order Now</a>
+            <br><br><br>
+            <p> Delivery done within minutes for orders in Nairobi, Kiambu, Kajiado and Machackos.</p>
+        </div>
+    </section>
+    <section id="products" class="products-section">
+        <h2>Our Pastries</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/src/applepie.jpg" alt="apple pie">
+                <h3>Apple Pie</h3>
+                <p class="price">$6.50</p>
+                <button class="btn add-to-cart" 
+                    data-id="apple-pie"
+                    data-name="Apple Pie"
+                    data-price="6.50"
+                    data-image="/src/applepie.jpg"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/src/baklava.png" alt="baklava">
+                <h3>Baklava</h3>
+                <p class="price">$5.99</p>
+                <button class="btn add-to-cart" 
+                    data-id="baklava"
+                    data-name="Baklava"
+                    data-price="5.99"
+                    data-image="/src/baklava.png"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/src/bread.JPG" alt="ginger bread">
+                <h3>Ginger Bread</h3>
+                <p class="price">$2.99</p>
+                <button class="btn add-to-cart" 
+                    data-id="ginger-bread"
+                    data-name="Ginger Bread"
+                    data-price="2.99"
+                    data-image="/src/bread.JPG"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/src/cheesecake.jpg" alt="cheese cake">
+                <h3>Cheese Cake</h3>
+                <p class="price">$7.69</p>
+                <button class="btn add-to-cart" 
+                    data-id="cheese-cake"
+                    data-name="Cheese Cake"
+                    data-price="7.69"
+                    data-image="/src/cheesecake.jpg"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/src/choux pastry.jpg" alt="choux pastry">
+                <h3>Sweet Choux</h3>
+                <p class="price">$5.00</p>
+                <button class="btn add-to-cart" 
+                    data-id="sweet-choux"
+                    data-name="Sweet Choux"
+                    data-price="5.00"
+                    data-image="/src/choux pastry.jpg"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/src/macaron.jpg" alt="macaron">
+                <h3>Macaron</h3>
+                <p class="price">$3.79</p>
+                <button class="btn add-to-cart" 
+                    data-id="macaron"
+                    data-name="Macaron"
+                    data-price="3.79"
+                    data-image="/src/macaron.jpg"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/src/palmier.jpg" alt="palmier">
+                <h3>Palmier</h3>
+                <p class="price">$9.00</p>
+                <button class="btn add-to-cart" 
+                    data-id="palmier"
+                    data-name="Palmier"
+                    data-price="9.00"
+                    data-image="/src/palmier.jpg"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/src/puff pastry.jpeg" alt="puff pastry">
+                <h3>Puff Pastry</h3>
+                <p class="price">$12.20</p>
+                <button class="btn add-to-cart" 
+                    data-id="puff-pastry"
+                    data-name="Puff Pastry"
+                    data-price="12.20"
+                    data-image="/src/puff pastry.jpeg"
+                    onclick="checkLoginStatus(event)">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter">
+        <nav>
+            <a href="/Home.html">Home</a> ||
+            <a href="/about.html">About Us</a>|| <a href="/contact.html">Contact us</a>||
+        </nav>
+            <h3>Sign Up for Our Newsletter</h3>
+            <p>Get the hottest updates, exclusive deals, sweet treats and more.</p>
+            <form class="newsletter-form" action="#" method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <p>&copy; 2024 captains pastries. | Baked with Love.</p>
+    </footer>
+</body>
+
+</html>
+
+<script>    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize cart in localStorage if it doesn't exist
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', JSON.stringify([]));
+        }
+    
+        // Add click handlers to all add-to-cart buttons
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = {
+                    id: this.dataset.id,
+                    name: this.dataset.name,
+                    price: parseFloat(this.dataset.price),
+                    image: this.dataset.image,
+                    quantity: 1
+                };
+    
+                // Get existing cart
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+                // Check if product already exists in cart
+                const existingProduct = cart.find(item => item.id === product.id);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push(product);
+                }
+    
+                // Save updated cart
+                localStorage.setItem('cart', JSON.stringify(cart));
+                
+                // Show success message and log for debugging
+                console.log('Cart updated:', cart); // Add this line for debugging
+                showNotification('Product added to cart!');
+            });
+        });
+
+        // Add notification function
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            // Remove notification after 2 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 2000);
+        }
+    });
+    $('.btn').on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value > 1) {
+            value = value - 1;
+        } else {
+            value = 0;
+        }
+
+        $input.val(value);
+    });
+</script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+    .navbar {
+        background-color: #ff6600;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        justify-content: center;
+        margin-top: 0%;
+        right: 1.5%;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .container {
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        width: 95%;
+    }
+
+
+    body {
+        color: #333;
+        background-color: #f9f9f9;
+        overflow-x: hidden;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        background-color: #ff6600;
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #8a4a1f;
+        transform: translateY(-2px);
+    }
+
+
+    .hero {
+        height: 111vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.gettyimages.com/id/1300959266/photo/man-dispensing-cakes-in-a-pastry-bakery.jpg?s=612x612&w=0&k=20&c=rqWUCCnlb8QaOx0m1BHgOGU8hC4CH5LSnutl0VOnMBM=");
+        background-size: auto;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #141313;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+        color: #f9f9f9;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+        font-size: 1.25rem;
+        color: #f9f9f9;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-text::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        background-color: #ff6600;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .navbar-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn :hover {
+        background-color: #ff4500;
+    }
+
+    .products-section {
+        padding: 4rem 2rem;
+        width: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .products-section h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #222;
+    }
+
+    .product-grid {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .product-card {
+        background-color: #d6d0d0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba (0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 250px;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .product-card .price {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        padding: 40px 20px;
+        background-color: #ff6600;
+        color: #fff;
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .newsletter {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .newsletter h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .newsletter p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsletter-form input [type="email"] {
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    .newsletter-form button {
+        padding: 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #9e5524;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .newsletter-form button :hover {
+        background-color: #ff6600;
+    }
+
+    @media (max-width: 600px) {
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .newsletter-form input[type="email"],
+        .newsletter-form button {
+            border-radius: 4px;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #ff6600;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<script>
+function checkLoginStatus(event) {
+    event.preventDefault();
+    
+    // Check if user is logged in (you'll need to implement your own login check)
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    
+    if (!isLoggedIn) {
+        // Show login/signup modal
+        showLoginModal();
+    } else {
+        // If clicking a link, navigate to the href
+        if (event.target.href) {
+            window.location.href = event.target.href;
+        }
+        // If clicking add to cart button, proceed with add to cart
+        if (event.target.classList.contains('add-to-cart')) {
+            addToCart(event.target);
+        }
+    }
+}
+
+function showLoginModal() {
+    // Create modal HTML
+    const modalHTML = `
+        <div class="login-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Please Log In or Sign Up</h2>
+                <p>You need to be logged in to access this feature.</p>
+                <div class="modal-buttons">
+                    <a href="login.html" class="modal-btn login-btn">Login</a>
+                    <a href="signup.html" class="modal-btn signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Add modal to page
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+    // Get modal elements
+    const modal = document.querySelector('.login-modal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    // Show modal
+    modal.style.display = 'flex';
+
+    // Close modal when clicking X
+    closeBtn.onclick = function() {
+        modal.remove();
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.remove();
+        }
+    }
+}
+
+// Function to handle adding to cart
+function addToCart(button) {
+    const product = {
+        id: button.dataset.id,
+        name: button.dataset.name,
+        price: parseFloat(button.dataset.price),
+        image: button.dataset.image,
+        quantity: 1
+    };
+
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existingProduct = cart.find(item => item.id === product.id);
+    
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Product added to cart!');
+}
+
+// Add styles for the modal
+const styles = `
+    <style>
+        .login-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .modal-content p {
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .modal-btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn {
+            background-color: #ff6600;
+            color: white;
+        }
+
+        .signup-btn {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .login-btn:hover {
+            background-color: #ff7722;
+        }
+
+        .signup-btn:hover {
+            background-color: #34495e;
+        }
+    </style>
+`;
+
+// Add styles to document
+document.head.insertAdjacentHTML('beforeend', styles);
+</script>
